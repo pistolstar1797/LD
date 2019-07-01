@@ -1,0 +1,180 @@
+`timescale 1ns / 1ps
+
+////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer:
+//
+// Create Date:   21:23:22 04/03/2018
+// Design Name:   v4to1MUX_s
+// Module Name:   /csehome/pistolstar1797/v4to1MUX/v4to1MUX_s_test.v
+// Project Name:  v4to1MUX
+// Target Device:  
+// Tool versions:  
+// Description: 
+//
+// Verilog Test Fixture created by ISE for module: v4to1MUX_s
+//
+// Dependencies:
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module v4to1MUX_s_test;
+
+	// Inputs
+	reg [3:0] X;
+	reg [1:0] C;
+
+	// Outputs
+	wire Y;
+
+	// Instantiate the Unit Under Test (UUT)
+	v4to1MUX_s uut (
+		.X(X), 
+		.C(C), 
+		.Y(Y)
+	);
+
+	initial begin
+		// Initialize Inputs
+		X = 0;
+		C = 0;
+
+		// Wait 100 ns for global reset to finish
+		#100;
+        
+		// Add stimulus here
+		X = 0 ; C = 1;
+		
+		#100 X = 0 ; C = 2;
+		
+		#100 X = 0 ; C = 3;
+		
+		#100 X = 1 ; C = 0;
+		
+		#100 X = 1 ; C = 1;
+		
+		#100 X = 1 ; C = 2;
+		
+		#100 X = 1 ; C = 3;
+		
+		#100 X = 2 ; C = 0;
+		
+		#100 X = 2 ; C = 1;
+		
+		#100 X = 2 ; C = 2;
+		
+		#100 X = 2 ; C = 3;
+		
+		#100 X = 3 ; C = 0;
+		
+		#100 X = 3 ; C = 1;
+		
+		#100 X = 3 ; C = 2;
+		
+		#100 X = 3 ; C = 3;
+		
+		#100 X = 4 ; C = 0;
+		
+		#100 X = 4 ; C = 1;
+		
+		#100 X = 4 ; C = 2;
+		
+		#100 X = 4 ; C = 3;
+		
+		#100 X = 5 ; C = 0;
+		
+		#100 X = 5 ; C = 1;
+		
+		#100 X = 5 ; C = 2;
+		
+		#100 X = 5 ; C = 3;
+		
+		#100 X = 6 ; C = 0;
+		
+		#100 X = 6 ; C = 1;
+		
+		#100 X = 6 ; C = 2;
+		
+		#100 X = 6 ; C = 3;
+		
+		#100 X = 7 ; C = 0;
+		
+		#100 X = 7 ; C = 1;
+		
+		#100 X = 7 ; C = 2;
+		
+		#100 X = 7 ; C = 3;
+		
+		#100 X = 8 ; C = 0;
+		
+		#100 X = 8 ; C = 1;
+		
+		#100 X = 8 ; C = 2;
+		
+		#100 X = 8 ; C = 3;
+		
+		#100 X = 9 ; C = 0;
+		
+		#100 X = 9 ; C = 1;
+		
+		#100 X = 9 ; C = 2;
+		
+		#100 X = 9 ; C = 3;
+		
+		#100 X = 10 ; C = 0;
+		
+		#100 X = 10 ; C = 1;
+		
+		#100 X = 10 ; C = 2;
+		
+		#100 X = 10 ; C = 3;
+		
+		#100 X = 11 ; C = 0;
+		
+		#100 X = 11 ; C = 1;
+		
+		#100 X = 11 ; C = 2;
+		
+		#100 X = 11 ; C = 3;
+		
+		#100 X = 12 ; C = 0;
+		
+		#100 X = 12 ; C = 1;
+		
+		#100 X = 12 ; C = 2;
+		
+		#100 X = 12 ; C = 3;
+		
+		#100 X = 13 ; C = 0;
+		
+		#100 X = 13 ; C = 1;
+
+		#100 X = 13 ; C = 2;
+		
+		#100 X = 13 ; C = 3;
+		
+		#100 X = 14 ; C = 0;
+		
+		#100 X = 14 ; C = 1;
+		
+		#100 X = 14 ; C = 2;
+		
+		#100 X = 14 ; C = 3;
+		
+		#100 X = 15 ; C = 0;
+		
+		#100 X = 15 ; C = 1;
+		
+		#100 X = 15 ; C = 2;
+		
+		#100 X = 15 ; C = 3;
+		
+	end
+      
+endmodule
+
+

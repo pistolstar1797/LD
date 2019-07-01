@@ -1,0 +1,124 @@
+// Verilog test fixture created from schematic /csehome/pistolstar1797/Lab3/EQ.sch - Tue Mar 27 20:12:46 2018
+
+`timescale 1ns / 1ps
+
+module EQ_EQ_sch_tb();
+
+// Inputs
+   reg A;
+   reg B;
+   reg C;
+   reg D;
+
+// Output
+   wire EQ;
+
+// Bidirs
+
+// Instantiate the UUT
+   EQ UUT (
+		.A(A),
+		.B(B),
+		.C(C),
+		.D(D),
+		.EQ(EQ)
+   );
+// Initialize Inputs
+   initial begin
+		A = 0;
+		B = 0;
+		C = 0;
+		D = 0;
+		#100
+		
+		A = 0;
+		B = 0;
+		C = 0;
+		D = 1;
+		#100
+		
+		A = 0;
+		B = 0;
+		C = 1;
+		D = 0;
+		#100
+		
+		A = 0;
+		B = 0;
+		C = 1;
+		D = 1;
+		#100
+		
+		A = 0;
+		B = 1;
+		C = 0;
+		D = 0;
+		#100
+		
+		A = 0;
+		B = 1;
+		C = 0;
+		D = 1;
+		#100
+		
+		A = 0;
+		B = 1;
+		C = 1;
+		D = 0;
+		#100
+		
+		A = 0;
+		B = 1;
+		C = 1;
+		D = 1;
+		#100
+		
+		A = 1;
+		B = 0;
+		C = 0;
+		D = 0;
+		#100
+		
+		A = 1;
+		B = 0;
+		C = 0;
+		D = 1;
+		#100
+		
+		A = 1;
+		B = 0;
+		C = 1;
+		D = 0;
+		#100
+		
+		A = 1;
+		B = 0;
+		C = 1;
+		D = 1;
+		#100
+		
+		A = 1;
+		B = 1;
+		C = 0;
+		D = 0;
+		#100
+		
+		A = 1;
+		B = 1;
+		C = 0;
+		D = 1;
+		#100
+		
+		A = 1;
+		B = 1;
+		C = 1;
+		D = 0;
+		#100
+		
+		A = 1;
+		B = 1;
+		C = 1;
+		D = 1;
+	end
+endmodule
+

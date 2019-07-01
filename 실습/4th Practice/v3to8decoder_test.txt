@@ -1,0 +1,93 @@
+`timescale 1ns / 1ps
+
+////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer:
+//
+// Create Date:   20:56:07 04/03/2018
+// Design Name:   v3to8decoder
+// Module Name:   /csehome/pistolstar1797/v74x139/v3to8decoder_test.v
+// Project Name:  v74x139
+// Target Device:  
+// Tool versions:  
+// Description: 
+//
+// Verilog Test Fixture created by ISE for module: v3to8decoder
+//
+// Dependencies:
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module v3to8decoder_test;
+
+	// Inputs
+	reg G_L;
+	reg A;
+	reg B;
+	reg C;
+
+	// Outputs
+	wire [7:0] Y_L;
+
+	// Instantiate the Unit Under Test (UUT)
+	v3to8decoder uut (
+		.G_L(G_L), 
+		.A(A), 
+		.B(B), 
+		.C(C), 
+		.Y_L(Y_L)
+	);
+
+	initial begin
+		// Initialize Inputs
+		G_L = 0;
+		A = 0;
+		B = 0;
+		C = 0;
+
+		// Wait 100 ns for global reset to finish
+		#100;
+        
+		// Add stimulus here
+		G_L = 0;
+		A = 1;
+		B = 0;
+		C = 0;
+		
+		#100 G_L = 0; A = 0;	B = 1; C = 0;
+		
+		#100 G_L = 0; A = 1;	B = 1; C = 0;
+		
+		#100 G_L = 0; A = 0;	B = 0; C = 1;
+		
+		#100 G_L = 0; A = 1;	B = 0; C = 1;
+		
+		#100 G_L = 0; A = 0;	B = 1; C = 1;
+		
+		#100 G_L = 0; A = 1;	B = 1; C = 1;
+		
+		#100 G_L = 1; A = 0;	B = 0; C = 0;
+		
+		#100 G_L = 1; A = 1;	B = 0; C = 0;
+		
+		#100 G_L = 1; A = 0;	B = 1; C = 0;
+		
+		#100 G_L = 1; A = 1;	B = 1; C = 0;
+		
+		#100 G_L = 1; A = 0;	B = 0; C = 1;
+		
+		#100 G_L = 1; A = 1;	B = 0; C = 1;
+		
+		#100 G_L = 1; A = 0;	B = 1; C = 1;
+		
+		#100 G_L = 1; A = 1;	B = 1; C = 1;
+
+	end
+      
+endmodule
+
+

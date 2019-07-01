@@ -1,0 +1,39 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    20:55:17 04/03/2018 
+// Design Name: 
+// Module Name:    v3to8decoder 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module v3to8decoder(
+    input G_L,
+    input A,
+    input B,
+    input C,
+    output [7:0] Y_L
+    );
+
+	 wire [3:0] out1;
+	 wire [3:0] out2;
+	 
+	 assign Y_L[3:0] = out1;
+	 assign Y_L[7:4] = out2;
+
+	 v74x139h_b T1(.G_L(G_L | C), .A(A), .B(B), .Y_L(out1));
+	 v74x139h_b T2(.G_L(G_L | ~C), .A(A), .B(B), .Y_L(out2));
+
+endmodule
+

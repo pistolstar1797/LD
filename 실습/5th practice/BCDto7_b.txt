@@ -1,0 +1,52 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    20:27:40 04/10/2018 
+// Design Name: 
+// Module Name:    BCDto7_b 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module BCDto7_b(
+    input A,
+    input B,
+    input C,
+    input D,
+    output [6:0] OUT
+    );
+	 
+	 wire [3:0] in;
+	 reg [6:0] t;
+	 
+	 assign in = {A, B, C, D};
+	 assign OUT = t;
+
+	 always@(in)
+		 begin
+			 case(in)
+				 4'b0000 : t = 7'b1111110;
+				 4'b0001 : t = 7'b0110000;
+				 4'b0010 : t = 7'b1101101;
+				 4'b0011 : t = 7'b1111001;
+				 4'b0100 : t = 7'b0110011;
+				 4'b0101 : t = 7'b1011011;
+				 4'b0110 : t = 7'b1011111;
+				 4'b0111 : t = 7'b1110000;
+				 4'b1000 : t = 7'b1111111;
+				 4'b1001 : t = 7'b1110011;
+			 endcase
+		 end
+
+endmodule
+

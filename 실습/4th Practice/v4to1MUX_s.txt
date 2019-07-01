@@ -1,0 +1,41 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    21:13:14 04/03/2018 
+// Design Name: 
+// Module Name:    v4to1MUX_s 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module v4to1MUX_s(
+    input [3:0] X,
+	 input [1:0] C,
+    output Y
+    );
+	 wire [3:0] T;
+	 wire [1:0] N_C;
+	 
+	 not (N_C[0], C[0]);
+	 not (N_C[1], C[1]);
+	 
+	 and (T[0], X[0], N_C[1], N_C[0]);
+	 and (T[1], X[1], N_C[1], C[0]);
+	 and (T[2], X[2], C[1], N_C[0]);
+	 and (T[3], X[3], C[1], C[0]);
+	 
+	 or (Y, T[0], T[1], T[2], T[3]);
+	 
+
+endmodule
+

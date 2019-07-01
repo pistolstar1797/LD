@@ -1,0 +1,40 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    19:55:07 04/03/2018 
+// Design Name: 
+// Module Name:    v74x139h_s 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module v74x139h_s(
+    input G_L,
+    input A,
+    input B,
+    output [3:0] Y_L
+    );
+
+	 wire N_A, N_B, G;
+	 
+	 not T1(G, G_L);
+	 not T2(N_A, A);
+	 not T3(N_B, B);
+	 
+	 nand T4(Y_L[0], G, N_A, N_B);
+	 nand T5(Y_L[1], G, A, N_B);
+	 nand T6(Y_L[2], G, N_A, B);
+	 nand T7(Y_L[3], G, A, B);
+
+endmodule
+

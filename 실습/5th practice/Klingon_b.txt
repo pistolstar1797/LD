@@ -1,0 +1,52 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    21:41:54 04/10/2018 
+// Design Name: 
+// Module Name:    Klingon_b 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module Klingon_b(
+    input A,
+    input B,
+    input C,
+    input D,
+    output [6:0] OUT
+    );
+
+	 wire [3:0] in;
+	 reg [6:0] t;
+	 
+	 assign in = {A, B, C, D};
+	 assign OUT = t;
+
+	 always@(in)
+		 begin
+			 case(in)
+				 4'b0000 : t = 7'b1111110;
+				 4'b0001 : t = 7'b1000000;
+				 4'b0010 : t = 7'b1000001;
+				 4'b0011 : t = 7'b1001001;
+				 4'b0100 : t = 7'b0100011;
+				 4'b0101 : t = 7'b0011101;
+				 4'b0110 : t = 7'b0100101;				
+				 4'b0111 : t = 7'b0010011;
+				 4'b1000 : t = 7'b0110110;
+				 4'b1001 : t = 7'b0110111;
+			 endcase
+		 end
+
+endmodule
+

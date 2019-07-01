@@ -1,0 +1,59 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    21:31:33 04/10/2018 
+// Design Name: 
+// Module Name:    Klingon_s 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module Klingon_s(
+    input A,
+    input B,
+    input C,
+    input D,
+    output [6:0] OUT
+    );
+
+	 wire NA, NB, NC, ND;
+	 wire BND, NCND, NBNCND, BD, NANBNCND;
+	 wire BNCD, NBCD, BCND, BCD, AD;
+	 
+	 not(NA, A);
+	 not(NB, B);
+	 not(NC, C);
+	 not(ND, D);
+
+	 and(BND, B, ND);
+	 and(NCND, NC, ND);
+	 and(NBNCND, NB, NC, ND);
+	 and(BD, B, D);
+	 and(NANBNCND, NA, NB, NC, ND);
+	 and(BNCD, B, NC, D);
+	 and(NBCD, NB, C, D);
+	 and(BCND, B, C, ND);
+	 and(BCD, B, C, D);
+	 and(AD, A, D);
+	 and(NANB, NA, NB);
+	 
+	 and(OUT[6], NA, NB);
+	 or(OUT[5], A, BND, NCND);
+	 or(OUT[4], A, NBNCND, BD);
+	 or(OUT[3], NANBNCND, BNCD, NBCD);
+	 or(OUT[2], A, BNCD, BCND, NBNCND);
+	 or(OUT[1], A, NCND, BCD);
+	 or(OUT[0], AD, B, C);
+
+endmodule
+

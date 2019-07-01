@@ -1,0 +1,56 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    19:50:41 04/10/2018 
+// Design Name: 
+// Module Name:    BCDto7_s 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module BCDto7_s(
+    input A,
+	 input B,
+	 input C,
+	 input D,
+    output [6:0] out
+    );
+
+	wire NA, NB, NC, ND;
+	wire BD, NBND, CD, NCND, CND, NBC, BND, BNC, BNCD;
+	
+	not(NA, A);
+	not(NB, B);
+	not(NC, C);
+	not(ND, D);
+	
+	and(BD, B, D);
+	and(CD, C, D);
+	and(NBND, NB, ND);
+	and(NCND, NC, ND);
+	and(CND, C, ND);
+	and(NBC, NB, C);
+	and(BND, B, ND);
+	and(BNC, B, NC);
+	and(BNCD, B, NC, D);
+	
+	or(out[6], A, BD, C, NBND);
+	or(out[5], NCND, CD, NB);
+	or(out[4], B, NC, D);
+	or(out[3], NBND, CND, BNCD, NBC);
+	or(out[2], NBND, CND);
+	or(out[1], A, NCND, BND, BNC);
+	or(out[0], A, CND, BNC, NBC);
+
+endmodule
+
