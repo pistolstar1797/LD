@@ -1,0 +1,70 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    18:47:18 05/08/2018 
+// Design Name: 
+// Module Name:    USR_4bit 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module USR_4bit(
+    input CLRb,
+    input S1,
+	 input S0,
+    input CLK,
+	 input SDL,
+	 input SDR,
+    output [3:0] D,
+    output [3:0] Q
+    );
+	 
+	 reg[3:0] int_Q;
+	 
+	 always @(posedge CLK or negedge CLRb) begin
+	
+		if (CLRb == 1'b0) begin
+			int_Q <= 4'b0000;
+		end
+		else begin
+			if(S1 == S0) begin
+				int_Q = (S1 == 1'b1) ? D : Q;
+			end
+			else begin
+				if(S1 == 1'b1) begin
+					int_Q[3:1] = Q[2:0];
+					if(SDL == 1'b0) begin
+						int_Q[0] = 1'b0;
+					end
+					else begin
+						int_Q[0] = 1'b1;
+					end
+				end
+				else begin
+					int_Q[2:0] = Q[3:1];
+					if(SDR == 1'b0) begin
+						int_Q[3] = 1'b0;
+					end
+					else begin
+						int_Q[3] = 1'b1;
+					end
+				end
+			end
+		end
+	end
+	
+	assign Q = int_Q;
+
+
+endmodule
+

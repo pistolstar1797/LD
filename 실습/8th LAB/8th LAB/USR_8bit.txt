@@ -1,0 +1,69 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    19:16:55 05/08/2018 
+// Design Name: 
+// Module Name:    USR_8bit 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module USR_8bit(
+    input CLRb,
+    input S1,
+    input S0,
+    input CLK,
+    input SDL,
+    input SDR,
+    output [7:0] D,
+    output [7:0] Q
+    );
+
+	 reg[7:0] int_Q;
+	 
+	 always @(posedge CLK or negedge CLRb) begin
+	
+		if (CLRb == 1'b0) begin
+			int_Q <= 8'b00000000;
+		end
+		else begin
+			if(S1 == S0) begin
+				int_Q = (S1 == 1'b1) ? D : Q;
+			end
+			else begin
+				if(S1 == 1'b1) begin
+					int_Q[7:1] = Q[6:0];
+					if(SDL == 1'b0) begin
+						int_Q[0] = 1'b0;
+					end
+					else begin
+						int_Q[0] = 1'b1;
+					end
+				end
+				else begin
+					int_Q[6:0] = Q[7:1];
+					if(SDR == 1'b0) begin
+						int_Q[7] = 1'b0;
+					end
+					else begin
+						int_Q[7] = 1'b1;
+					end
+				end
+			end
+		end
+	end
+	
+	assign Q = int_Q;
+
+endmodule
+

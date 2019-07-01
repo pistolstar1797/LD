@@ -1,0 +1,41 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    20:26:36 05/15/2018 
+// Design Name: 
+// Module Name:    TDC_toggle 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module TDC_toggle(
+    input tclk,
+    input stop,
+    input clr,
+    input reset,
+    input toggle,
+    output [6:0] low_seg,
+    output [6:0] high_seg
+    );
+
+	 wire [3:0] high_num;
+	 wire [3:0] low_num;
+	 wire clk;
+	
+	FreqDiv T1(.clkin(tclk), .clr(clr), .clkout(clk));
+	BCDto7 T2(.bcd(high_num), .seg(high_seg));
+	BCDto7 T3(.bcd(low_num), .seg(low_seg));
+	counter100_toggle T4(.clk(clk), .clr(reset), .stop(stop), .toggle(toggle), .high_num(high_num), .low_num(low_num));
+
+endmodule
+

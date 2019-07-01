@@ -1,0 +1,102 @@
+`timescale 1ns / 1ps
+
+////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer:
+//
+// Create Date:   19:18:34 05/08/2018
+// Design Name:   USR_8bit
+// Module Name:   /csehome/pistolstar1797/USR_4bit/USR_8bit_test.v
+// Project Name:  USR_4bit
+// Target Device:  
+// Tool versions:  
+// Description: 
+//
+// Verilog Test Fixture created by ISE for module: USR_8bit
+//
+// Dependencies:
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module USR_8bit_test;
+
+	// Inputs
+	reg CLRb;
+	reg S1;
+	reg S0;
+	wire CLK;
+	reg SDL;
+	reg SDR;
+	reg ENA;
+	
+	// Outputs
+	reg [7:0] D;
+	wire [7:0] Q;
+
+	// Instantiate the Unit Under Test (UUT)
+	USR_8bit uut1 (
+		.CLRb(CLRb), 
+		.S1(S1), 
+		.S0(S0), 
+		.CLK(CLK), 
+		.SDL(SDL), 
+		.SDR(SDR), 
+		.D(D), 
+		.Q(Q)
+	);
+	
+	CLKGEN uut2 (
+		.CLK(CLK),
+		.ENA(ENA)
+	);
+
+	initial begin
+		// Initialize Inputs
+		ENA = 1'b0;
+
+		#15;
+		ENA = 1'b1;
+		
+		#15;
+		CLRb = 1'b0;
+		S1 = 1'b0;
+		S0 = 1'b0;
+		SDL = 1'b0;
+		SDR = 1'b0;
+		D = 8'b11111111;
+		
+		#15;
+		CLRb = 1'b1;
+		D = 8'b10101010;
+		
+		#15;
+		S1 = 1'b1;
+		S0 = 1'b1;
+		
+		#15;
+		S1 = 1'b1;
+		S0 = 1'b0;
+		
+		#15;
+		SDL = 1;
+		
+		#15;
+		S1 = 1'b0;
+		S0 = 1'b1;
+		
+		#15;
+		SDR = 1;
+		
+		#15;
+		S1 = 1'b0;
+		S0 = 1'b0;
+
+	end
+      
+endmodule
+
+

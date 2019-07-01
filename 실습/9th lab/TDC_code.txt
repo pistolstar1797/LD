@@ -1,0 +1,40 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    19:22:39 05/15/2018 
+// Design Name: 
+// Module Name:    TDC 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module TDC(
+	 input tclk,
+    input stop,
+	 input clr,
+    input reset,
+	 output [6:0] high_seg,
+	 output [6:0] low_seg
+	 );
+	 
+	 wire [3:0] high_num;
+	 wire [3:0] low_num;
+	 wire clk;
+	
+	FreqDiv T1(.clkin(tclk), .clr(clr), .clkout(clk));
+	BCDto7 T2(.bcd(high_num), .seg(high_seg));
+	BCDto7 T3(.bcd(low_num), .seg(low_seg));
+	counter100 T4(.clk(clk), .clr(reset), .stop(stop), .high_num(high_num), .low_num(low_num));
+	
+endmodule
+
