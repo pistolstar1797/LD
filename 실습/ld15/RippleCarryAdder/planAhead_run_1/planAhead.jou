@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Tue Apr 24 19:32:44 2018
+# Process ID: 6027
+# Log file: /csehome/ld15/RippleCarryAdder/planAhead_run_1/planAhead.log
+# Journal file: /csehome/ld15/RippleCarryAdder/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /csehome/ld15/RippleCarryAdder/pa.fromNetlist.tcl
+set_property package_pin "" [get_ports [list  {s[1]}]]
+startgroup
+set_property package_pin P87 [get_ports {s[1]}]
+endgroup
+startgroup
+set_property package_pin P88 [get_ports {s[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  c0]]
+startgroup
+set_property package_pin P90 [get_ports c2]
+endgroup
+startgroup
+set_property package_pin P30 [get_ports {a[1]}]
+endgroup
+startgroup
+set_property package_pin P31 [get_ports {a[0]}]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports {b[1]}]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports {b[0]}]
+endgroup
+startgroup
+set_property package_pin P88 [get_ports {s[0]}]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports c0]
+endgroup
+set_property is_loc_fixed false [get_ports [list  c0]]
+set_property is_loc_fixed true [get_ports [list  c0]]
+save_constraints
