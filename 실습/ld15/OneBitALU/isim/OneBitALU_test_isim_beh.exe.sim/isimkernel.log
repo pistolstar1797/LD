@@ -1,0 +1,29 @@
+Command line:
+   OneBitALU_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  41489
+
+Tue Apr 24 20:00:39 2018
+
+
+ Elaboration Time: 0.01 sec
+
+ Current Memory Usage: 235.786 Meg
+
+ Total Signals          : 20
+ Total Nets             : 20
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 14
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 106
+Total Line Count : 62
+
+ Total Simulation Time: 0.13 sec
+
+ Current Memory Usage: 311.288 Meg
+
+Tue Apr 24 20:01:39 2018
+

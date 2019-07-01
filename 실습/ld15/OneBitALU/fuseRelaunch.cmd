@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/csehome/ld15/OneBitALU/OneBitALU_test_isim_beh.exe" -prj "/csehome/ld15/OneBitALU/OneBitALU_test_beh.prj" "work.OneBitALU_test" "work.glbl" 
