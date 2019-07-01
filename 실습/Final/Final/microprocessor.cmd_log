@@ -1,0 +1,21 @@
+xst -intstyle ise -ifn "/csehome/pistolstar1797/Final/microprocessor.xst" -ofn "/csehome/pistolstar1797/Final/microprocessor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc microprocessor.ucf -p xc3s50an-tqg144-4 microprocessor.ngc microprocessor.ngd  
+map -intstyle ise -p xc3s50an-tqg144-4 -cm area -ir off -pr off -c 100 -o microprocessor_map.ncd microprocessor.ngd microprocessor.pcf 
+par -w -intstyle ise -ol high -t 1 microprocessor_map.ncd microprocessor.ncd microprocessor.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc microprocessor.ucf -p xc3s50an-tqg144-4 microprocessor.ngc microprocessor.ngd  
+map -intstyle ise -p xc3s50an-tqg144-4 -cm area -ir off -pr off -c 100 -o microprocessor_map.ncd microprocessor.ngd microprocessor.pcf 
+par -w -intstyle ise -ol high -t 1 microprocessor_map.ncd microprocessor.ncd microprocessor.pcf 
+xst -intstyle ise -ifn "/csehome/pistolstar1797/Final/microprocessor.xst" -ofn "/csehome/pistolstar1797/Final/microprocessor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc microprocessor.ucf -p xc3s50an-tqg144-4 microprocessor.ngc microprocessor.ngd  
+map -intstyle ise -p xc3s50an-tqg144-4 -cm area -ir off -pr off -c 100 -o microprocessor_map.ncd microprocessor.ngd microprocessor.pcf 
+par -w -intstyle ise -ol high -t 1 microprocessor_map.ncd microprocessor.ncd microprocessor.pcf 
+xst -intstyle ise -ifn "/csehome/pistolstar1797/Final/microprocessor.xst" -ofn "/csehome/pistolstar1797/Final/microprocessor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc microprocessor.ucf -p xc3s50an-tqg144-4 microprocessor.ngc microprocessor.ngd  
+map -intstyle ise -p xc3s50an-tqg144-4 -cm area -ir off -pr off -c 100 -o microprocessor_map.ncd microprocessor.ngd microprocessor.pcf 
+par -w -intstyle ise -ol high -t 1 microprocessor_map.ncd microprocessor.ncd microprocessor.pcf 
+xst -intstyle ise -ifn "/csehome/pistolstar1797/Final/microprocessor.xst" -ofn "/csehome/pistolstar1797/Final/microprocessor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc microprocessor.ucf -p xc3s50an-tqg144-4 microprocessor.ngc microprocessor.ngd  
+map -intstyle ise -p xc3s50an-tqg144-4 -cm area -ir off -pr off -c 100 -o microprocessor_map.ncd microprocessor.ngd microprocessor.pcf 
+par -w -intstyle ise -ol high -t 1 microprocessor_map.ncd microprocessor.ncd microprocessor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml microprocessor.twx microprocessor.ncd -o microprocessor.twr microprocessor.pcf -ucf microprocessor.ucf 
+bitgen -intstyle ise -f microprocessor.ut microprocessor.ncd 

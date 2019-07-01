@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/csehome/pistolstar1797/Final/microprocessor.ncd
+OUTFILE=/csehome/pistolstar1797/Final/microprocessor.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50an-4tqg144
+WORKINGDIR=/csehome/pistolstar1797/Final
+LICENSE=WebPack
+USER_INFO=211016637_0_0_814

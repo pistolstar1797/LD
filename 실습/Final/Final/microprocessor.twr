@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml microprocessor.twx microprocessor.ncd -o microprocessor.twr
+microprocessor.pcf -ucf microprocessor.ucf
+
+Design file:              microprocessor.ncd
+Physical constraint file: microprocessor.pcf
+Device,package,speed:     xc3s50an,tqg144,-4 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock _clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+_clk           |    5.258|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+instruction<0> |bnum<0>        |   17.750|
+instruction<0> |bnum<1>        |   18.331|
+instruction<0> |bnum<2>        |   17.986|
+instruction<0> |bnum<3>        |   18.855|
+instruction<0> |bnum<4>        |   18.221|
+instruction<0> |bnum<5>        |   18.128|
+instruction<0> |bnum<6>        |   18.558|
+instruction<0> |snum<0>        |   18.045|
+instruction<0> |snum<1>        |   17.476|
+instruction<0> |snum<2>        |   17.969|
+instruction<0> |snum<3>        |   17.860|
+instruction<0> |snum<4>        |   17.989|
+instruction<0> |snum<5>        |   17.789|
+instruction<0> |snum<6>        |   18.376|
+instruction<1> |bnum<0>        |   16.325|
+instruction<1> |bnum<1>        |   16.818|
+instruction<1> |bnum<2>        |   16.418|
+instruction<1> |bnum<3>        |   17.342|
+instruction<1> |bnum<4>        |   16.708|
+instruction<1> |bnum<5>        |   16.703|
+instruction<1> |bnum<6>        |   17.133|
+instruction<1> |snum<0>        |   16.550|
+instruction<1> |snum<1>        |   16.132|
+instruction<1> |snum<2>        |   16.497|
+instruction<1> |snum<3>        |   16.516|
+instruction<1> |snum<4>        |   16.494|
+instruction<1> |snum<5>        |   16.317|
+instruction<1> |snum<6>        |   17.032|
+instruction<2> |bnum<0>        |   18.088|
+instruction<2> |bnum<1>        |   18.669|
+instruction<2> |bnum<2>        |   18.324|
+instruction<2> |bnum<3>        |   19.193|
+instruction<2> |bnum<4>        |   18.559|
+instruction<2> |bnum<5>        |   18.466|
+instruction<2> |bnum<6>        |   18.896|
+instruction<2> |snum<0>        |   18.383|
+instruction<2> |snum<1>        |   17.814|
+instruction<2> |snum<2>        |   18.307|
+instruction<2> |snum<3>        |   18.198|
+instruction<2> |snum<4>        |   18.327|
+instruction<2> |snum<5>        |   18.127|
+instruction<2> |snum<6>        |   18.714|
+instruction<3> |bnum<0>        |   18.150|
+instruction<3> |bnum<1>        |   18.731|
+instruction<3> |bnum<2>        |   18.386|
+instruction<3> |bnum<3>        |   19.255|
+instruction<3> |bnum<4>        |   18.621|
+instruction<3> |bnum<5>        |   18.528|
+instruction<3> |bnum<6>        |   18.958|
+instruction<3> |snum<0>        |   18.445|
+instruction<3> |snum<1>        |   17.876|
+instruction<3> |snum<2>        |   18.369|
+instruction<3> |snum<3>        |   18.260|
+instruction<3> |snum<4>        |   18.389|
+instruction<3> |snum<5>        |   18.189|
+instruction<3> |snum<6>        |   18.776|
+instruction<4> |bnum<0>        |   17.703|
+instruction<4> |bnum<1>        |   18.185|
+instruction<4> |bnum<2>        |   17.796|
+instruction<4> |bnum<3>        |   18.673|
+instruction<4> |bnum<4>        |   18.012|
+instruction<4> |bnum<5>        |   18.081|
+instruction<4> |bnum<6>        |   18.511|
+instruction<4> |snum<0>        |   17.800|
+instruction<4> |snum<1>        |   17.495|
+instruction<4> |snum<2>        |   17.875|
+instruction<4> |snum<3>        |   17.879|
+instruction<4> |snum<4>        |   17.634|
+instruction<4> |snum<5>        |   17.695|
+instruction<4> |snum<6>        |   18.148|
+instruction<5> |bnum<0>        |   17.036|
+instruction<5> |bnum<1>        |   17.617|
+instruction<5> |bnum<2>        |   17.272|
+instruction<5> |bnum<3>        |   18.141|
+instruction<5> |bnum<4>        |   17.507|
+instruction<5> |bnum<5>        |   17.414|
+instruction<5> |bnum<6>        |   17.844|
+instruction<5> |snum<0>        |   17.331|
+instruction<5> |snum<1>        |   16.796|
+instruction<5> |snum<2>        |   17.255|
+instruction<5> |snum<3>        |   17.180|
+instruction<5> |snum<4>        |   17.275|
+instruction<5> |snum<5>        |   17.075|
+instruction<5> |snum<6>        |   17.696|
+instruction<6> |bnum<0>        |   17.218|
+instruction<6> |bnum<1>        |   17.763|
+instruction<6> |bnum<2>        |   17.418|
+instruction<6> |bnum<3>        |   18.287|
+instruction<6> |bnum<4>        |   17.653|
+instruction<6> |bnum<5>        |   17.596|
+instruction<6> |bnum<6>        |   18.026|
+instruction<6> |snum<0>        |   17.477|
+instruction<6> |snum<1>        |   17.010|
+instruction<6> |snum<2>        |   17.401|
+instruction<6> |snum<3>        |   17.394|
+instruction<6> |snum<4>        |   17.421|
+instruction<6> |snum<5>        |   17.221|
+instruction<6> |snum<6>        |   17.808|
+instruction<7> |bnum<0>        |   17.502|
+instruction<7> |bnum<1>        |   17.984|
+instruction<7> |bnum<2>        |   17.595|
+instruction<7> |bnum<3>        |   18.472|
+instruction<7> |bnum<4>        |   17.811|
+instruction<7> |bnum<5>        |   17.880|
+instruction<7> |bnum<6>        |   18.310|
+instruction<7> |snum<0>        |   17.599|
+instruction<7> |snum<1>        |   17.294|
+instruction<7> |snum<2>        |   17.674|
+instruction<7> |snum<3>        |   17.678|
+instruction<7> |snum<4>        |   17.433|
+instruction<7> |snum<5>        |   17.494|
+instruction<7> |snum<6>        |   17.947|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Jun 15 18:34:59 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 365 MB
+
+
+

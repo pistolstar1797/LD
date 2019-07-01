@@ -1,0 +1,45 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Jun 15 18:34:46 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "_clk" LOCATE = SITE "P57" LEVEL 1;
+COMP "address<0>" LOCATE = SITE "P96" LEVEL 1;
+COMP "address<1>" LOCATE = SITE "P98" LEVEL 1;
+COMP "address<2>" LOCATE = SITE "P99" LEVEL 1;
+COMP "address<3>" LOCATE = SITE "P101" LEVEL 1;
+COMP "address<4>" LOCATE = SITE "P102" LEVEL 1;
+COMP "address<5>" LOCATE = SITE "P103" LEVEL 1;
+COMP "address<6>" LOCATE = SITE "P104" LEVEL 1;
+COMP "address<7>" LOCATE = SITE "P105" LEVEL 1;
+COMP "bnum<0>" LOCATE = SITE "P10" LEVEL 1;
+COMP "bnum<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "bnum<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "bnum<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "bnum<4>" LOCATE = SITE "P5" LEVEL 1;
+COMP "bnum<5>" LOCATE = SITE "P4" LEVEL 1;
+COMP "bnum<6>" LOCATE = SITE "P3" LEVEL 1;
+COMP "reset" LOCATE = SITE "P47" LEVEL 1;
+COMP "snum<0>" LOCATE = SITE "P19" LEVEL 1;
+COMP "snum<1>" LOCATE = SITE "P18" LEVEL 1;
+COMP "snum<2>" LOCATE = SITE "P16" LEVEL 1;
+COMP "snum<3>" LOCATE = SITE "P15" LEVEL 1;
+COMP "snum<4>" LOCATE = SITE "P13" LEVEL 1;
+COMP "snum<5>" LOCATE = SITE "P12" LEVEL 1;
+COMP "snum<6>" LOCATE = SITE "P11" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "P93" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "P92" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "P91" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "P90" LEVEL 1;
+COMP "LED<4>" LOCATE = SITE "P88" LEVEL 1;
+COMP "LED<5>" LOCATE = SITE "P87" LEVEL 1;
+COMP "instruction<0>" LOCATE = SITE "P120" LEVEL 1;
+COMP "instruction<1>" LOCATE = SITE "P121" LEVEL 1;
+COMP "instruction<2>" LOCATE = SITE "P124" LEVEL 1;
+COMP "instruction<3>" LOCATE = SITE "P125" LEVEL 1;
+COMP "instruction<4>" LOCATE = SITE "P126" LEVEL 1;
+COMP "instruction<5>" LOCATE = SITE "P127" LEVEL 1;
+COMP "instruction<6>" LOCATE = SITE "P129" LEVEL 1;
+COMP "instruction<7>" LOCATE = SITE "P130" LEVEL 1;
+SCHEMATIC END;
+
