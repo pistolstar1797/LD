@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/csehome/ld15/RippleCarryAdder/RippleCarryAdder.ncd
+OUTFILE=/csehome/ld15/RippleCarryAdder/RippleCarryAdder.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50an-4tqg144
+WORKINGDIR=/csehome/ld15/RippleCarryAdder
+LICENSE=WebPack
+USER_INFO=211016637_0_0_814

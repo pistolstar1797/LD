@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/csehome/ld15/RippleCarryAdder/impact.xsl
+OUTFILE=/csehome/ld15/RippleCarryAdder/impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=/csehome/ld15/RippleCarryAdder
+LICENSE=iMPACT
+USER_INFO=iMPACT

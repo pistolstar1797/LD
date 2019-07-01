@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "/csehome/ld15/RippleCarryAdder/RippleCarryAdder.xst" -ofn "/csehome/ld15/RippleCarryAdder/RippleCarryAdder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc RippleCarryAdder.ucf -p xc3s50an-tqg144-4 RippleCarryAdder.ngc RippleCarryAdder.ngd  
+map -intstyle ise -p xc3s50an-tqg144-4 -cm area -ir off -pr off -c 100 -o RippleCarryAdder_map.ncd RippleCarryAdder.ngd RippleCarryAdder.pcf 
+par -w -intstyle ise -ol high -t 1 RippleCarryAdder_map.ncd RippleCarryAdder.ncd RippleCarryAdder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml RippleCarryAdder.twx RippleCarryAdder.ncd -o RippleCarryAdder.twr RippleCarryAdder.pcf -ucf RippleCarryAdder.ucf 
+bitgen -intstyle ise -f RippleCarryAdder.ut RippleCarryAdder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc RippleCarryAdder.ucf -p xc3s50an-tqg144-4 RippleCarryAdder.ngc RippleCarryAdder.ngd  
+map -intstyle ise -p xc3s50an-tqg144-4 -cm area -ir off -pr off -c 100 -o RippleCarryAdder_map.ncd RippleCarryAdder.ngd RippleCarryAdder.pcf 
+par -w -intstyle ise -ol high -t 1 RippleCarryAdder_map.ncd RippleCarryAdder.ncd RippleCarryAdder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml RippleCarryAdder.twx RippleCarryAdder.ncd -o RippleCarryAdder.twr RippleCarryAdder.pcf -ucf RippleCarryAdder.ucf 
+bitgen -intstyle ise -f RippleCarryAdder.ut RippleCarryAdder.ncd 

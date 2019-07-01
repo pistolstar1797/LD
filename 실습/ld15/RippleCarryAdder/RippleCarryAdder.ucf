@@ -1,0 +1,10 @@
+
+
+NET "s[1]" LOC = P88;
+NET "c2" LOC = P87;
+NET "a[1]" LOC = P30;
+NET "a[0]" LOC = P31;
+NET "b[1]" LOC = P32;
+NET "b[0]" LOC = P33;
+NET "s[0]" LOC = P90;
+NET "c0" LOC = P41;
