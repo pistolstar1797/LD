@@ -1,0 +1,13 @@
+MO mux8 NULL mux8.v vlg36/mux8.bin 1529055276
+MO clk NULL clk.v vlg32/clk.bin 1529055276
+MO pc NULL pc.v vlg13/pc.bin 1529055276
+MO memory NULL memory.v vlg69/memory.bin 1529055276
+MO register NULL register.v vlg29/register.bin 1529055276
+MO add NULL add.v vlg51/add.bin 1529055276
+MO control NULL control.v vlg61/control.bin 1529055276
+MO Bcount NULL Bcount.v vlg17/_bcount.bin 1529055276
+MO mux NULL mux.v vlg66/mux.bin 1529055276
+MO microprocessor NULL microprocessor.v vlg42/microprocessor.bin 1529055276
+MO BCDto7 NULL BCDto7.v vlg27/_b_c_dto7.bin 1529055276
+MO alu NULL alu.v vlg0A/alu.bin 1529055276
+MO signextend NULL signextend.v vlg0D/signextend.bin 1529055276
